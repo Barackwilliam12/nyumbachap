@@ -15,9 +15,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-achkwvomvn%5^$*3l@sq-%*6$biqg79=*2x^qbmzp=dvtq-r#h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['nyumbachap-27d17eaa570b.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -91,24 +91,24 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '1515',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': '1515',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 
