@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(165, 86, 165);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .login-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px 50px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-container img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        
+        .thank-you-message {
+            box-shadow: 0px 0px 20px 0px rgb(221, 221, 221);
+            color: #000000;
+            margin-bottom: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button-container a {
+            padding: 10px 20px;
+            background-color: #6a0dad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-container a:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Wait for Confirmation</h2>
+        <img src="{% static 'images/nyumbachap.png' %}" alt="Logo"> <!-- Add your image source here -->
+
+        <!-- Thank you message -->
+        <div class="thank-you-message">
+        <p><b>Habari {{user.username}} Tumepokea Taarifa Zako za Malipo. Timu yetu inatayarisha Huduma yako na utapokea Taarifa Zaidi ndani ya Muda Mfupi. Tunakushukuru Kwa Kuchagua NyumbaChap.</b></p>
+        </div>
+
+        <!-- Buttons for navigation -->
+        <div class="button-container">
+            <a href="{% url 'popular_featured' %}">Home</a>
+            <a href="{% url 'jihudumie' %}">Back</a>
+        </div>
+    </div>
+</body>
+</html>

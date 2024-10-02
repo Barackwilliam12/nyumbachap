@@ -1,0 +1,22 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        
+
+        <form class="file-upload" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        
+            <label for="upload">Upload Image:</label>
+            <input type="file" id="upload" name="Transaction_image" accept=".jpg, .jpeg, .png"> <br><!-- Only image files allowed -->
+            <input type="submit" value="Submit" id="submit-btn">
+        </form>
+    </body>
+</html> 

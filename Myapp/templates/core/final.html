@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bei ya nyumba za kupanga </title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: rgb(216, 201, 201);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1100ff;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #e40000;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center the navigation items */
+            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+        }
+
+        nav li {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: rgb(0, 0, 0);
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px; /* Limit the width on larger screens */
+            text-align: center; /* Align section content center */
+        }
+
+        section h2, section h3, section h4 {
+            color: #007BFF;
+        }
+
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            /* For tablets and smaller devices */
+            nav ul {
+                flex-direction: column; /* Stack navigation links */
+            }
+
+            section {
+                margin: 10px; /* Reduce margin */
+                padding: 15px; /* Reduce padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* For smartphones */
+            nav li {
+                flex: 1 100%; /* Each navigation item takes full width */
+            }
+
+            section {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            header {
+                padding: 0.5em; /* Reduce padding in header */
+            }
+
+            .btn {
+                width: 100%; /* Buttons take full width on mobile */
+                padding: 12px;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Jinsi ya Kulipia Kwa Mitandao ya Simu</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#Airtel">Airtel</a></li>
+            <li><a href="#vodacom">Vodacom</a></li>
+            <li><a href="#Tigo">Tigo</a></li>
+            <li><a href="#Halotel">Halotel</a></li>
+        </ul>
+    </nav>
+
+    <section id="Airtel">
+        <h2>Airtel</h2>
+        <h4>Namba ya Malipo: 1324764 (Eliya Shop)</h4>
+        <h3><u>Hatua za kufuata</u></h3>
+        <ul>
+            <li>Bonyeza <b>*150*60#</b></li>
+            <li>Chagua no.5: <b>Lipa Bill</b></li>
+            <li>Chagua no.1: <b>Lipa kwa Simu</b></li>
+            <li>Chagua no.1: <b>Lipa Kwa Airtel lipa namba</b></li>
+            <li>Ingiza Kiasi: <b>(Kulingana na Huduma uliyochagua)</b></li>
+            <li>Ingiza Lipa Namba: <b>(1324764)</b></li>
+            <li>Ingiza namba ya siri Kuthibitisha</li>
+        </ul>
+        <a href="{% url 'complete' %}" class="btn">Endelea..</a>
+    </section>
+
+    <section id="vodacom">
+        <h2>Vodacom</h2>
+        <h4>Namba ya Malipo: 0693703366 (William)</h4>
+        <h3><u>Hatua za kufuata</u></h3>
+        <ul>
+            <li>Bonyeza <b>*150*00#</b></li>
+            <li>Chagua no.1: <b>Tuma pesa</b></li>
+            <li>Chagua no.5: <b>Mitandao Mingine</b></li>
+            <li>Chagua no.1 <b>Airtel Money</b></li>
+            <li>Ingiza namba ya simu<b>(0693703366)</b></li>
+            <li>Weka Kiasi <b>(Kulingana na Huduma uliyochagua)</b></li>
+            <li>chagua 1:<b> kutuma kama pesa</b></li>
+            <li>ingiza namba ya siri</li>
+            <li>bonyeza 1 <b>kuthibitisha</b></li>
+        </ul>
+        <a href="{% url 'complete' %}" class="btn">Endelea..</a>
+    </section>
+
+    <section id="Tigo">
+        <h2>Tigo</h2>
+        <h4>Namba ya Malipo: 1324764 (Eliya Shop)</h4>
+        <h3><u>Hatua za kufuata</u></h3>
+        <ul>
+            <li>Bonyeza: <b>*150*01#</b></li>
+            <li>Chagua no.5: <b>Lipa Kwa Simu</b></li>
+            <li>Chagua no.5: <b>Kwenda Mitandao Mingine</b></li>
+            <li>Chagua no.3:<b>Airtel Money</b></li>
+            <li>Ingiza Airtel lipa Namba<b>(1324764)</b></li>
+            <li>Ingiza Kiasi: <b>(Kulingana na huduma uliyochagua)</b></li>
+            <li>Ingiza Namba ya Siri <b>kuthibitisha</b></li>
+        </ul>
+        <a href="{% url 'complete' %}" class="btn">Endelea..</a>
+    </section>
+
+    <section id="Halotel">
+        <h2>Halotel</h2>
+        <h4>Namba ya Malipo: 0693703366 (William)</h4>
+        <h3><u>Hatua za kufuata</u></h3>
+        <ul>
+            <li>Bonyeza: <b>*150*88#</b></li>
+            <li>Chagua no.1: <b>Tuma pesa</b></li>
+            <li>Chagua no.2: <b>Kwenda Mitandao Mingine</b></li>
+            <li>Chagua no.4:<b>Airtel Money</b></li>
+            <li>Ingiza Namba ya Simu<b>(0693703366)</b></li>
+            <li>Ingiza Kiasi: <b>(Kulingana na huduma uliyochagua)</b></li>
+            <li>Ingiza Namba ya Siri</li>
+            <li>Chagua no.1: <b>kuthibitisha</b></li>
+        </ul>
+        <a href="{% url 'complete' %}" class="btn">Endelea..</a>
+    </section>
+
+</body>
+
+</html>
