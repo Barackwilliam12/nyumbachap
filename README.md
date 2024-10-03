@@ -39,7 +39,7 @@ Follow these steps to set up NyumbaChap locally.
 
 1. **Clone the repository**
 
-   ```bash
+   ### bash
    git clone https://github.com/Barackwilliam12/nyumbachap.git
    cd Django_project
 ## Create a virtual environment
